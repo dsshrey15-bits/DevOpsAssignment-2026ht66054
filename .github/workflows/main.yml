@@ -37,3 +37,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t aceest-app .
+	
+      - name: Test the build
+	run: curl http://localhost:5000/programs	
