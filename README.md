@@ -171,3 +171,49 @@ Example response:
   "calories_per_day": 1540
 }
 ```
+
+## Assignment 2 screenshot walkthrough
+
+The screenshots are ordered by workflow stage. Their filenames reflect when they were captured, so the sequence below may differ from the capture times.
+
+### 1. Configure SonarQube in Jenkins
+
+1. **Start the SonarQube server.** Run the SonarQube container for local code analysis.
+   ![Start the SonarQube server](<Assignment2 screenshots/Screenshot_2026-11-24_18-14-09.png>)
+
+2. **Sign in to SonarQube.** Open the server and sign in to the SonarQube web interface.
+   ![Sign in to SonarQube](<Assignment2 screenshots/Screenshot_2026-11-24_18-15-33.png>)
+
+3. **Generate a SonarQube token.** Create a token for Jenkins to authenticate analysis requests.
+   ![Generate a SonarQube token](<Assignment2 screenshots/Screenshot_2026-11-24_18-19-00.png>)
+
+4. **Install the Jenkins plugins.** Select the SonarQube Scanner and Sonar Quality Gates plugins.
+   ![Install the SonarQube Jenkins plugins](<Assignment2 screenshots/Screenshot_2026-11-24_18-20-18.png>)
+
+5. **Configure the SonarScanner tool.** Add the scanner installation in Jenkins system tools.
+   ![Configure SonarScanner in Jenkins](<Assignment2 screenshots/Screenshot_2026-11-24_18-24-37.png>)
+
+6. **Configure the SonarQube server.** Connect the Jenkins SonarQube installation to its server and token credential.
+   ![Configure the SonarQube server in Jenkins](<Assignment2 screenshots/Screenshot_2026-11-24_18-30-06.png>)
+
+7. **SonarQube passed and Docker build completed.** The Jenkins run shows successful SonarQube analysis, Docker image build, and image push.
+   ![SonarQube analysis and Docker build passed in Jenkins](<Assignment2 screenshots/Screenshot 2026-11-24 at 8.55.42 PM.png>)
+
+### 2. Prepare image publishing and Kubernetes
+
+8. **Create the Docker Hub repository.** Set up the image repository used by the pipeline.
+   ![Create the Docker Hub repository](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.55.21  PM.png>)
+
+9. **Install and start Minikube.** Download Minikube and start the local Kubernetes cluster.
+   ![Install and start Minikube](<Assignment2 screenshots/Screenshot 2026-11-24 at 8.59 PM.png>)
+
+10. **Install and verify kubectl.** Install the Kubernetes CLI and check the cluster.
+   ![Install kubectl and verify the cluster](<Assignment2 screenshots/Screenshot 2026-11-24 at 9.04 PM.png>)
+
+### 3. Verify analysis and deployment
+
+11. **Review the SonarQube analysis.** Confirm the project analysis is available in SonarQube.
+    ![Review the SonarQube project analysis](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.49.52 PM.png>)
+
+12. **Verify deployment to Minikube.** Confirm the Jenkins pipeline applies the Kubernetes manifests and the deployment rolls out successfully.
+    ![Verify the Jenkins Minikube deployment](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.51.25 PM.png>)
