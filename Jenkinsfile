@@ -28,6 +28,20 @@ pipeline {
             }
         }
 
+        stage('Check Docker Access') {
+            steps {
+                sh '''
+                    if ! docker info >/dev/null; then
+                        echo "ERROR: The Jenkins agent cannot access the Docker daemon."
+                        echo "Check Docker socket permissions and the agent user's docker-group membership."
+                        id
+                        ls -l /var/run/docker.sock
+                        exit 1
+                    fi
+                '''
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t aceest-app .'
