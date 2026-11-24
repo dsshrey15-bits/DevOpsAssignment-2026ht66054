@@ -204,16 +204,19 @@ The screenshots are ordered by workflow stage. Their filenames reflect when they
 8. **Create the Docker Hub repository.** Set up the image repository used by the pipeline.
    ![Create the Docker Hub repository](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.55.21  PM.png>)
 
-9. **Install and start Minikube.** Download Minikube and start the local Kubernetes cluster.
+9. **Verify the pushed image in Docker Hub.** Confirm the image tags are visible in the registry.
+   ![Verify the pushed image in Docker Hub](<Assignment2 screenshots/Screenshot 2026-11-24 at 11.21.10 PM.png>)
+
+10. **Install and start Minikube.** Download Minikube and start the local Kubernetes cluster.
    ![Install and start Minikube](<Assignment2 screenshots/Screenshot 2026-11-24 at 8.59 PM.png>)
 
-10. **Install and verify kubectl.** Install the Kubernetes CLI and check the cluster.
+11. **Install and verify kubectl.** Install the Kubernetes CLI and check the cluster.
    ![Install kubectl and verify the cluster](<Assignment2 screenshots/Screenshot 2026-11-24 at 9.04 PM.png>)
 
 ### 3. Verify analysis and deployment
 
-11. **Review the SonarQube analysis.** Confirm the project analysis is available in SonarQube.
+12. **Review the SonarQube analysis.** Confirm the project analysis is available in SonarQube.
     ![Review the SonarQube project analysis](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.49.52 PM.png>)
 
-12. **Verify deployment to Minikube.** Confirm the Jenkins pipeline applies the Kubernetes manifests and the deployment rolls out successfully.
+13. **Verify deployment to Minikube.** Confirm the Jenkins pipeline applies the Kubernetes manifests and the deployment rolls out successfully.
     ![Verify the Jenkins Minikube deployment](<Assignment2 screenshots/Screenshot 2026-11-24 at 10.51.25 PM.png>)
